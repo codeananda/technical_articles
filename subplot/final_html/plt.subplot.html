@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+<div tabindex="-1">
+<div>
+<div><div>
+</div><div>
+<div>
+<h1>Matplotlib Subplot - A Helpful Illustrated Guide<a href="#Matplotlib-Subplot---A-Helpful-Illustrated-Guide"></a></h1>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<p>To create a matplotlib subplot with any number of rows and columns, use the <code>plt.subplot()</code> function.</p>
+<p>It takes 3 arguments, all of which are integers and positional only i.e. you cannot use keywords to specify them.</p>
+<div><pre><span></span><span>plt</span><span>.</span><span>subplot</span><span>(</span><span>nrows</span><span>,</span> <span>ncols</span><span>,</span> <span>index</span><span>)</span>
+</pre></div>
+<ul>
+<li><code>nrows</code> - the number of rows </li>
+<li><code>ncols</code> - the number of columns</li>
+<li><code>index</code> - the <code>Subplot</code> you want to select (starting from 1 in the top left)</li>
+</ul>
+<p>So, <code>plt.subplot(3, 1, 1)</code> has 3 rows, 1 column (a 3 x 1 grid) and selects <code>Subplot</code> with index 1.</p>
+<p>After <code>plt.subplot()</code>, code your plot as normal using the <code>plt.</code> functions you know and love. Then, select the next subplot by increasing the index by 1 - <code>plt.subplot(3, 1, 2)</code> selects the second <code>Subplot</code> in a 3 x 1 grid. Once all <code>Subplots</code> have been plotted, call <code>plt.tight_layout()</code> to ensure no parts of the plots overlap. Finally, call <code>plt.show()</code> to display your plot.</p>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>In [1]:</div>
+<div>
+<div>
+<div><pre><span></span><span># Import necessary modules and (optionally) set Seaborn style</span>
+<span>import</span> <span>matplotlib.pyplot</span> <span>as</span> <span>plt</span>
+<span>import</span> <span>seaborn</span> <span>as</span> <span>sns</span><span>;</span> <span>sns</span><span>.</span><span>set</span><span>()</span>
+<span>import</span> <span>numpy</span> <span>as</span> <span>np</span>
+
+<span># Generate data to plot</span>
+<span>linear</span> <span>=</span> <span>[</span><span>x</span> <span>for</span> <span>x</span> <span>in</span> <span>range</span><span>(</span><span>5</span><span>)]</span>
+<span>square</span> <span>=</span> <span>[</span><span>x</span><span>**</span><span>2</span> <span>for</span> <span>x</span> <span>in</span> <span>range</span><span>(</span><span>5</span><span>)]</span>
+<span>cube</span> <span>=</span> <span>[</span><span>x</span><span>**</span><span>3</span> <span>for</span> <span>x</span> <span>in</span> <span>range</span><span>(</span><span>5</span><span>)]</span>
+
+<span># 3x1 grid, first subplot</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>3</span><span>,</span> <span>1</span><span>,</span> <span>1</span><span>)</span>
+<span>plt</span><span>.</span><span>plot</span><span>(</span><span>linear</span><span>)</span>
+
+<span># 3x1 grid, second subplot</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>3</span><span>,</span> <span>1</span><span>,</span> <span>2</span><span>)</span>
+<span>plt</span><span>.</span><span>plot</span><span>(</span><span>square</span><span>)</span>
+
+<span># 3x1 grid, third subplot</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>3</span><span>,</span> <span>1</span><span>,</span> <span>3</span><span>)</span>
+<span>plt</span><span>.</span><span>plot</span><span>(</span><span>cube</span><span>)</span>
+
+<span>plt</span><span>.</span><span>tight_layout</span><span>()</span>
+<span>plt</span><span>.</span><span>show</span><span>()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<div></div>
+<div>
+<img src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img0.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<h2>Matplotlib Subplot Example<a href="#Matplotlib-Subplot-Example"></a></h2><p>The arguments for <code>plt.subplot()</code> are intuitive:</p>
+<pre><code>plt.subplot(nrows, ncols, index)</code></pre>
+<p>The first two - nrows and ncols - stand for the number of rows and number of columns respectively.</p>
+<p>If you want a 2x2 grid, set nrows=2 and ncols=2. For a 3x1 grid, it’s nrows=3 and ncols=1.</p>
+<p>The index is the subplot you want to select. The code you write immediately after it is drawn on that subplot. Unlike everything else in the Python universe, indexing starts from 1, not 0. It continues from left-to-right in the same way you read.</p>
+<p>So, for a 2 x 2 grid, the indexes are</p>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<div>
+<img align="left" src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img1.png" width="400"/>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<p>For a 3 x 1 grid, they are</p>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<div>
+<img align="left" src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img2.png" width="400"/>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<p>The arguments for <code>plt.subplot()</code> are positional only. You cannot pass them as keyword arguments.</p>
+<div><pre><span></span><span>&gt;&gt;&gt;</span> <span>plt</span><span>.</span><span>subplot</span><span>(</span><span>nrows</span><span>=</span><span>3</span><span>,</span> <span>ncols</span><span>=</span><span>1</span><span>,</span> <span>index</span><span>=</span><span>1</span><span>)</span>
+<span>AttributeError</span><span>:</span> <span>'AxesSubplot'</span> <span>object</span> <span>has</span> <span>no</span> <span>property</span> <span>'nrows'</span>
+</pre></div>
+<p>However, the comma between the values is optional, if each value is an integer less than 10.</p>
+<p>Thus, the following are equivalent - they both select index 1 from a 3x1 grid.</p>
+<div><pre><span></span><span>plt</span><span>.</span><span>subplot</span><span>(</span><span>3</span><span>,</span> <span>1</span><span>,</span> <span>1</span><span>)</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>311</span><span>)</span>
+</pre></div>
+<p>I will alternate between including and excluding commas to aid your learning.</p>
+<p>Let's look at the default subplot layout and the general outline for your code.</p>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>In [2]:</div>
+<div>
+<div>
+<div><pre><span></span><span>plt</span><span>.</span><span>subplot</span><span>(</span><span>3</span><span>,</span> <span>1</span><span>,</span> <span>1</span><span>)</span>
+<span># First subplot here</span>
+
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>3</span><span>,</span> <span>1</span><span>,</span> <span>2</span><span>)</span>
+<span># Second subplot here</span>
+
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>3</span><span>,</span> <span>1</span><span>,</span> <span>3</span><span>)</span>
+<span># Third subplot here</span>
+
+<span>plt</span><span>.</span><span>show</span><span>()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<div></div>
+<div>
+<img src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img3.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<p>This looks ok but the x-axis labels are hard to read on the top 2 subplots.</p>
+<p>You have a few ways to solve this problem.</p>
+<p>First, you can manually adjust the xticks with the <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.xticks.html">matplotlib xticks</a> function - <code>plt.xticks()</code> - and either:</p>
+<ol>
+<li>make them transparent by setting <code>alpha=0</code>, or</li>
+<li>move them and decrease their font size with the <code>position</code> and <code>size</code> arguments</li>
+</ol>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>In [3]:</div>
+<div>
+<div>
+<div><pre><span></span><span># Make xticks of top 2 subplots transparent</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>3</span><span>,</span> <span>1</span><span>,</span> <span>1</span><span>)</span>
+<span>plt</span><span>.</span><span>xticks</span><span>(</span><span>alpha</span><span>=</span><span>0</span><span>)</span>
+
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>3</span><span>,</span> <span>1</span><span>,</span> <span>2</span><span>)</span>
+<span>plt</span><span>.</span><span>xticks</span><span>(</span><span>alpha</span><span>=</span><span>0</span><span>)</span>
+
+<span># Plot nothing on final subplot</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>3</span><span>,</span> <span>1</span><span>,</span> <span>3</span><span>)</span>
+
+<span>plt</span><span>.</span><span>suptitle</span><span>(</span><span>'Transparent Xticks - plt.xticks(alpha=0)'</span><span>)</span>
+<span>plt</span><span>.</span><span>show</span><span>()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<div></div>
+<div>
+<img src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img4.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>In [4]:</div>
+<div>
+<div>
+<div><pre><span></span><span># Move and decrease size of xticks on all subplots</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>3</span><span>,</span> <span>1</span><span>,</span> <span>1</span><span>)</span>
+<span>plt</span><span>.</span><span>xticks</span><span>(</span><span>position</span><span>=</span><span>(</span><span>0</span><span>,</span> <span>0.1</span><span>),</span> <span>size</span><span>=</span><span>10</span><span>)</span>
+
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>3</span><span>,</span> <span>1</span><span>,</span> <span>2</span><span>)</span>
+<span>plt</span><span>.</span><span>xticks</span><span>(</span><span>position</span><span>=</span><span>(</span><span>0</span><span>,</span> <span>0.1</span><span>),</span> <span>size</span><span>=</span><span>10</span><span>)</span>
+
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>3</span><span>,</span> <span>1</span><span>,</span> <span>3</span><span>)</span>
+<span>plt</span><span>.</span><span>xticks</span><span>(</span><span>position</span><span>=</span><span>(</span><span>0</span><span>,</span> <span>0.1</span><span>),</span> <span>size</span><span>=</span><span>10</span><span>)</span>
+
+<span>plt</span><span>.</span><span>suptitle</span><span>(</span><span>'Smaller Xticks In A Better Position'</span><span>)</span>
+<span>plt</span><span>.</span><span>show</span><span>()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<div></div>
+<div>
+<img src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img5.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<p>Both these methods work but are fiddly. Plus, you cannot automate them which is annoying for us programmers.</p>
+<p>You have this ticks problem whenever you create subplots. Thankfully, the <a href="https://matplotlib.org/3.1.0/api/tight_layout_api.html">matplotlib tight_layout</a> function was created to solve this.</p>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<h2>Matplotlib Tight_Layout<a href="#Matplotlib-Tight_Layout"></a></h2><p>By calling  <code>plt.tight_layout()</code>, matplotlib automatically adjusts the following parts of the plot to make sure they don't overlap:</p>
+<ol>
+<li>axis labels set with <code>plt.xlabel()</code> and <code>plt.ylabel()</code>,</li>
+<li>tick labels set with <code>plt.xticks()</code> and <code>plt.yticks()</code>,</li>
+<li>titles set with <code>plt.title()</code> and <code>plt.suptitle()</code></li>
+</ol>
+<p>Note that this feature is experimental. It's not perfect but often does a really good job. Also, note that it does not work too well with legends or colorbars - you'll see how to work with them later.</p>
+<p>Let's see the most basic example without any labels or titles.</p>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>In [6]:</div>
+<div>
+<div>
+<div><pre><span></span><span>plt</span><span>.</span><span>subplot</span><span>(</span><span>311</span><span>)</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>312</span><span>)</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>313</span><span>)</span>
+<span>plt</span><span>.</span><span>tight_layout</span><span>()</span>
+<span>plt</span><span>.</span><span>show</span><span>()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<div></div>
+<div>
+<img src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img6.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<p>Now there is plenty of space between the plots. You can adjust this with the <code>pad</code> keyword. It accepts a float in the range [0.0, 1.0] and is a fraction of the font size.</p>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>In [6]:</div>
+<div>
+<div>
+<div><pre><span></span><span>plt</span><span>.</span><span>subplot</span><span>(</span><span>311</span><span>)</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>312</span><span>)</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>313</span><span>)</span>
+<span>plt</span><span>.</span><span>tight_layout</span><span>(</span><span>pad</span><span>=</span><span>0.1</span><span>)</span>
+<span>plt</span><span>.</span><span>show</span><span>()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<div></div>
+<div>
+<img src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img7.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<p>Now there is less space between the plots but everything is still readable. I use <code>plt.tight_layout()</code> in every single plot (without colobars or legends) and I recommend you do as well. It's an easy way to make your plots look great.</p>
+<p>Check out the docs more information and arguments that <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.tight_layout.html">tight_layout in matplotlib</a> accepts.</p>
+<p>Now, let's look at how to add more info to our subplots in matplotib.</p>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<h2>Matplotlib Subplot Title<a href="#Matplotlib-Subplot-Title"></a></h2><p>You can add a title to each subplot with the <code>plt.title()</code> function.</p>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>In [7]:</div>
+<div>
+<div>
+<div><pre><span></span><span>plt</span><span>.</span><span>subplot</span><span>(</span><span>2</span><span>,</span> <span>2</span><span>,</span> <span>1</span><span>)</span>
+<span>plt</span><span>.</span><span>title</span><span>(</span><span>'First Title'</span><span>)</span>
+
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>2</span><span>,</span> <span>2</span><span>,</span> <span>2</span><span>)</span>
+<span>plt</span><span>.</span><span>title</span><span>(</span><span>'Second Title'</span><span>)</span>
+
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>2</span><span>,</span> <span>2</span><span>,</span> <span>3</span><span>)</span>
+<span>plt</span><span>.</span><span>title</span><span>(</span><span>'Third Title'</span><span>)</span>
+
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>2</span><span>,</span> <span>2</span><span>,</span> <span>4</span><span>)</span>
+<span>plt</span><span>.</span><span>title</span><span>(</span><span>'Fourth Title'</span><span>)</span>
+
+<span>plt</span><span>.</span><span>tight_layout</span><span>()</span>
+<span>plt</span><span>.</span><span>show</span><span>()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<div></div>
+<div>
+<img src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img8.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<h2>Matplotlib Subplot Overall Title<a href="#Matplotlib-Subplot-Overall-Title"></a></h2><p>Add an overall title to a subplot in matplotlib with the <code>plt.suptitle()</code> function (it stands for 'super title').</p>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>In [8]:</div>
+<div>
+<div>
+<div><pre><span></span><span># Same plot as above</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>2</span><span>,</span> <span>2</span><span>,</span> <span>1</span><span>)</span>
+<span>plt</span><span>.</span><span>title</span><span>(</span><span>'First Title'</span><span>)</span>
+
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>2</span><span>,</span> <span>2</span><span>,</span> <span>2</span><span>)</span>
+<span>plt</span><span>.</span><span>title</span><span>(</span><span>'Second Title'</span><span>)</span>
+
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>2</span><span>,</span> <span>2</span><span>,</span> <span>3</span><span>)</span>
+<span>plt</span><span>.</span><span>title</span><span>(</span><span>'Third Title'</span><span>)</span>
+
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>2</span><span>,</span> <span>2</span><span>,</span> <span>4</span><span>)</span>
+<span>plt</span><span>.</span><span>title</span><span>(</span><span>'Fourth Title'</span><span>)</span>
+
+<span># Add overall title to the plot</span>
+<span>plt</span><span>.</span><span>suptitle</span><span>(</span><span>'My Lovely Plot'</span><span>)</span>
+<span>plt</span><span>.</span><span>tight_layout</span><span>()</span>
+<span>plt</span><span>.</span><span>show</span><span>()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<div></div>
+<div>
+<img src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img9.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<h2>Matplotlib Subplot Height<a href="#Matplotlib-Subplot-Height"></a></h2><p>To change the height of a subplot in matplotlib, see the next section.</p>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<h2>Matplotlib Subplot Size<a href="#Matplotlib-Subplot-Size"></a></h2><p>You have total control over the size of subplots in matplotlib.</p>
+<p>You can either change the size of the entire <code>Figure</code> or the size of the <code>Subplots</code> themselves.</p>
+<p>Let's look at changing the <code>Figure</code>.</p>
+<h3>Matplotlib Figure Size<a href="#Matplotlib-Figure-Size"></a></h3><p>First off, what is the <code>Figure</code>? To quote the <a href="https://github.com/matplotlib/AnatomyOfMatplotlib">AnatomyOfMatplotlib</a>:</p>
+<blockquote><p>It is the overall window/page that everything is drawn on.  You can have multiple independent figures and <code>Figures</code> can contain multiple <code>Subplots</code></p>
+</blockquote>
+<p>In other words, the <code>Figure</code> is the blank canvas you 'paint' all your plots on.</p>
+<p>If you are happy with the size of your subplots but you want the final image to be larger/smaller, change the <code>Figure</code>. Do this at the top of your code with the <a href="https://matplotlib.org/3.1.0/api/_as_gen/matplotlib.pyplot.figure.html">matplotlib figure</a> function - <code>plt.figure()</code>.</p>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>In [8]:</div>
+<div>
+<div>
+<div><pre><span></span><span># Make Figure 3 inches wide and 6 inches long</span>
+<span>plt</span><span>.</span><span>figure</span><span>(</span><span>figsize</span><span>=</span><span>(</span><span>3</span><span>,</span> <span>6</span><span>))</span>
+
+<span># Create 2x1 grid of subplots</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>211</span><span>)</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>212</span><span>)</span>
+<span>plt</span><span>.</span><span>show</span><span>()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<div></div>
+<div>
+<img src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img10.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<p>Before coding any subplots, call <code>plt.figure()</code> and specify the <code>Figure</code> size with the <code>figsize</code> argument. It accepts a tuple of 2 numbers - <code>(width, height)</code> of the image in inches.</p>
+<p>Above, I created a plot 3 inches wide and 6 inches long - <code>plt.figure(figsize=(3, 6))</code>.</p>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>In [10]:</div>
+<div>
+<div>
+<div><pre><span></span><span># Make a Figure twice as long as it is wide</span>
+<span>plt</span><span>.</span><span>figure</span><span>(</span><span>figsize</span><span>=</span><span>plt</span><span>.</span><span>figaspect</span><span>(</span><span>2</span><span>))</span>
+
+<span># Create 2x1 grid of subplots</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>211</span><span>)</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>212</span><span>)</span>
+<span>plt</span><span>.</span><span>show</span><span>()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<div></div>
+<div>
+<img src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img11.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<p>You can set a more general <code>Figure</code> size with the <a href="https://matplotlib.org/3.1.0/api/_as_gen/matplotlib.figure.figaspect.html">matplotlib figaspect</a> function. It lets you set the aspect ratio (height/width) of the <code>Figure</code>.</p>
+<p>Above, I created a <code>Figure</code> twice as long as it is wide by setting <code>figsize=plt.figaspect(2)</code>.</p>
+<p>Note: Remember the aspect ratio (height/width) formula by recalling that <code>height</code> comes first in the alphabet.</p>
+<p>Now let's look at putting different sized <code>Subplots</code> on one <code>Figure</code>.</p>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<h3>Matplotlib Subplots Different Sizes<a href="#Matplotlib-Subplots-Different-Sizes"></a></h3><p>The hardest part of creating a <code>Figure</code> with different sized <code>Subplots</code> in matplotlib is figuring out what fraction each <code>Subplot</code> takes up.</p>
+<p>So, you should know what you are aiming for before you start. You could sketch it on paper or draw shapes in PowerPoint. Once you've done this, everything else is much easier.</p>
+<p>I'm going to create this shape</p>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<div>
+<img align="left" src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img12.png" width="400"/>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<p>I've labeled the fraction each <code>Subplot</code> takes up as we need this for our <code>plt.subplot()</code> calls.</p>
+<p>I'll create the biggest subplot first and the others in descending order.</p>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<div>
+<img align="left" src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img13.png" width="400"/>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<p>The right-hand side is half of the plot. It is one of two plots on a <code>Figure</code> with 1 row and 2 columns. To select it with <code>plt.subplot()</code>, you need to set <code>index=2</code>.</p>
+<p>Note that in the image, the blue numbers are the index values each <code>Subplot</code> has.</p>
+<p>In code, this is</p>
+<div><pre><span></span><span>plt</span><span>.</span><span>subplot</span><span>(</span><span>122</span><span>)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<div>
+<img align="left" src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img14.png" width="400"/>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<p>Now, select the bottom left <code>Subplot</code> in a a 2x2 grid i.e. <code>index=3</code></p>
+<div><pre><span></span><span>plt</span><span>.</span><span>subplot</span><span>(</span><span>223</span><span>)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<div>
+<img align="left" src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img15.png" width="400"/>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<p>Lastly, select the top two <code>Subplots</code> on the left-hand side of a 4x2 grid i.e. <code>index=1</code> and <code>index=3</code>.</p>
+<div><pre><span></span><span>plt</span><span>.</span><span>subplot</span><span>(</span><span>421</span><span>)</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>423</span><span>)</span>
+</pre></div>
+<p>When you put this altogether you get</p>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>In [12]:</div>
+<div>
+<div>
+<div><pre><span></span><span># Subplots you have just figured out</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>122</span><span>)</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>223</span><span>)</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>421</span><span>)</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>423</span><span>)</span>
+
+<span>plt</span><span>.</span><span>tight_layout</span><span>(</span><span>pad</span><span>=</span><span>0.1</span><span>)</span>
+<span>plt</span><span>.</span><span>show</span><span>()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<div></div>
+<div>
+<img src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img16.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<p>Perfect! Breaking the <code>Subplots</code> down into their individual parts and knowing the shape you want makes everything easier.</p>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<h3>Matplotlib Subplot Size Different<a href="#Matplotlib-Subplot-Size-Different"></a></h3><p>You may have noticed that each of the <code>Subplots</code> in the previous example took up <code>1/x</code> fraction of space - <code>1/2</code>, <code>1/4</code> and <code>1/8</code>.</p>
+<p>With the matplotlib subplot function, you can <em>only</em> create <code>Subplots</code> that are <code>1/x</code>.</p>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<div>
+<img align="left" src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img17.png" width="400"/>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<p>It is not possible to create the above plot in matplotlib using the <code>plt.subplot()</code> function. However, if you use the <a href="https://matplotlib.org/devdocs/api/_as_gen/matplotlib.pyplot.subplots.html">matplotlib subplots</a> function or <a href="https://matplotlib.org/api/_as_gen/matplotlib.gridspec.GridSpec.html#matplotlib.gridspec.GridSpec">GridSpec</a>, then it can be done.</p>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<h2>Matplotlib Subplots_Adjust<a href="#Matplotlib-Subplots_Adjust"></a></h2><p>If you aren't happy with the spacing between plots that <code>plt.tight_layout()</code> provides, manually adjust it with <code>plt.subplots_adjust()</code>.</p>
+<p>It takes 6 optional, self-explanatory keyword arguments. Each accepts a float in the range [0.0, 1.0] and they are a fraction of the font size:</p>
+<ul>
+<li><code>left</code>, <code>right</code>, <code>bottom</code> and <code>top</code> is the spacing on each side of the <code>Subplot</code></li>
+<li><code>wspace</code> - the <strong>width</strong> between <code>Subplots</code></li>
+<li><code>hspace</code> - the <strong>height</strong> between <code>Subplots</code></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>In [15]:</div>
+<div>
+<div>
+<div><pre><span></span><span># Same grid as above</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>122</span><span>)</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>223</span><span>)</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>421</span><span>)</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>423</span><span>)</span>
+
+<span># Set horizontal and vertical space to 0.05</span>
+<span>plt</span><span>.</span><span>subplots_adjust</span><span>(</span><span>hspace</span><span>=</span><span>0.05</span><span>,</span> <span>wspace</span><span>=</span><span>0.05</span><span>)</span>
+<span>plt</span><span>.</span><span>show</span><span>()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<div></div>
+<div>
+<img src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img18.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<p>In this example, I decreased both the height and width to just <code>0.05</code>. Now there is hardly any space between the plots.</p>
+<p>To avoid loads of similar examples, play around with the arguments yourself to get a feel for how this function works.</p>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<h2>Matplotlib Suplot DPI<a href="#Matplotlib-Suplot-DPI"></a></h2><p>The Dots Per Inch (DPI) is a measure of printer resolution. It is the number of colored dots placed on each square inch of paper when it's printed. The more dots you have, the higher the quality of the image. If you are going to print your plot on a large poster, it's a good idea to use a large DPI.</p>
+<p>The DPI for each <code>Figure</code> is controlled by the <code>plt.rcParams</code> dictionary. It contains all the <em>runtime configuration</em> settings. If you print <code>plt.rcParams</code> to the screen, you will see all the variables you can modify. We want <code>figure.dpi</code>.</p>
+<p>Let's make a simple line plot first with the default DPI (72.0) and then a much smaller value.</p>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>In [13]:</div>
+<div>
+<div>
+<div><pre><span></span><span># Print default DPI</span>
+<span>print</span><span>(</span><span>f</span><span>"The default DPI in matplotlib is </span><span>{plt.rcParams['figure.dpi']}</span><span>"</span><span>)</span>
+
+<span># Default DPI</span>
+<span>plt</span><span>.</span><span>plot</span><span>([</span><span>1</span><span>,</span> <span>2</span><span>,</span> <span>3</span><span>,</span> <span>4</span><span>])</span>
+<span>plt</span><span>.</span><span>title</span><span>(</span><span>'DPI - 72.0'</span><span>)</span>
+<span>plt</span><span>.</span><span>show</span><span>()</span>
+
+<span># Smaller DPI</span>
+<span>plt</span><span>.</span><span>rcParams</span><span>[</span><span>'figure.dpi'</span><span>]</span> <span>=</span> <span>30.0</span>
+<span>plt</span><span>.</span><span>plot</span><span>([</span><span>1</span><span>,</span> <span>2</span><span>,</span> <span>3</span><span>,</span> <span>4</span><span>])</span>
+<span>plt</span><span>.</span><span>title</span><span>(</span><span>'DPI - 30.0'</span><span>)</span>
+<span>plt</span><span>.</span><span>show</span><span>()</span>
+
+<span># Change DPI back to 72.0</span>
+<span>plt</span><span>.</span><span>rcParams</span><span>[</span><span>'figure.dpi'</span><span>]</span> <span>=</span> <span>72.0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<div></div>
+<div>
+<pre>The default DPI in matplotlib is 72.0
+</pre>
+</div>
+</div>
+<div>
+<div></div>
+<div>
+<img src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img19.png"/>
+</div>
+</div>
+<div>
+<div></div>
+<div>
+<img src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img20.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<p>The <code>Figure</code> with a smaller DPI is smaller and has a lower resolution.</p>
+<p>If you want to permanently change the DPI of all matplotlib <code>Figures</code> - or any of the runtime configuration settings - find the <code>matplotlibrc</code> file on your system and modify it.</p>
+<p>You can find it by entering</p>
+<div><pre><span></span><span>import</span> <span>matplotlib</span> <span>as</span> <span>mpl</span>
+<span>mpl</span><span>.</span><span>matplotlib_fname</span><span>()</span>
+</pre></div>
+<p>Once you have found it, there are notes inside telling you what everything does.</p>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<h2>Matplotlib Subplot Spacing<a href="#Matplotlib-Subplot-Spacing"></a></h2><p>The function <code>plt.tight_layout()</code> solves most of your spacing issues. If that is not enough, call it with the optional <code>pad</code> and pass a float in the range [0.0, 1.0]. If that still is not enough, use the <code>plt.subplots_adjust()</code> function.</p>
+<p>I've explained both of these functions in detail further up the article.</p>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<h2>Matplotlib Subplot Colorbar<a href="#Matplotlib-Subplot-Colorbar"></a></h2><p>Adding a colorbar to each plot is the same as adding a title - code it underneath the <code>plt.subplot()</code> call you are currently working on. Let's plot a 1x2 grid where each <code>Subplot</code> is a heatmap of randomly generated numbers.</p>
+<p>For more info on the <a href="https://blog.finxter.com/python-random-module/">Python random module</a>, check out my article. I use the Numpy random module below but the same ideas apply.</p>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>In [20]:</div>
+<div>
+<div>
+<div><pre><span></span><span># Set seed so you can reproduce results</span>
+<span>np</span><span>.</span><span>random</span><span>.</span><span>seed</span><span>(</span><span>1</span><span>)</span>
+
+<span># Create a 10x10 array of random floats in the range [0.0, 1.0]</span>
+<span>data1</span> <span>=</span> <span>np</span><span>.</span><span>random</span><span>.</span><span>random</span><span>((</span><span>10</span><span>,</span> <span>10</span><span>))</span>
+<span>data2</span> <span>=</span> <span>np</span><span>.</span><span>random</span><span>.</span><span>random</span><span>((</span><span>10</span><span>,</span> <span>10</span><span>))</span>
+
+<span># Make figure twice as wide as it is long </span>
+<span>plt</span><span>.</span><span>figure</span><span>(</span><span>figsize</span><span>=</span><span>plt</span><span>.</span><span>figaspect</span><span>(</span><span>1</span><span>/</span><span>2</span><span>))</span>
+
+<span># First subplot</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>121</span><span>)</span>
+<span>pcm1</span> <span>=</span> <span>plt</span><span>.</span><span>pcolormesh</span><span>(</span><span>data1</span><span>,</span> <span>cmap</span><span>=</span><span>'Blues'</span><span>)</span>
+<span>plt</span><span>.</span><span>colorbar</span><span>(</span><span>pcm1</span><span>)</span>
+
+<span># Second subplot</span>
+<span>plt</span><span>.</span><span>subplot</span><span>(</span><span>122</span><span>)</span>
+<span>pcm2</span> <span>=</span> <span>plt</span><span>.</span><span>pcolormesh</span><span>(</span><span>data2</span><span>,</span> <span>cmap</span><span>=</span><span>'Greens'</span><span>)</span>
+<span>plt</span><span>.</span><span>colorbar</span><span>(</span><span>pcm2</span><span>)</span>
+
+<span>plt</span><span>.</span><span>tight_layout</span><span>()</span>
+<span>plt</span><span>.</span><span>show</span><span>()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<div></div>
+<div>
+<img src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img21.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<p>First, I created some <code>(10, 10)</code> arrays containing random numbers between 0 and 1 using the <code>np.random.random()</code> function. Then I plotted them as heatmaps using <code>plt.pcolormesh()</code>. I stored the result and passed it to <code>plt.colorbar()</code>, then finished the plot.</p>
+<p>As this is an article on <code>Subplots</code>, I won't discuss the <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pcolormesh.html">matplotlib pcolormesh</a> function in detail.</p>
+<p>Since these plots are different samples of the same data, you can plot them with the same color and just draw one colorbar.</p>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<div>
+<img align="left" src="https://github.com/theadammurphy/matplotlib_articles/tree/master/subplot/img/img22.png"/>
+</div>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<p>To draw this plot, use the same code as above and set the same <code>colormap</code> in both <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pcolormesh.html">matplotlib pcolormesh</a> calls - <code>cmap='Blues'</code>. Then draw the colorbar on the second subplot.</p>
+<p>This doesn't look as good as the above <code>Figure</code> since the colorbar takes up space from the second <code>Subplot</code>. Unfortunately, you cannot change this behavior - the colorbar takes up space from the <code>Subplot</code> it is drawn next to.</p>
+<p>It is possible to <a href="https://matplotlib.org/3.1.0/gallery/subplots_axes_and_figures/colorbar_placement.html">draw colorbars over multiple <code>Subplots</code></a> but you need to use the <code>plt.subplots()</code> function.</p>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<h2>Matplotlib Subplot Grid<a href="#Matplotlib-Subplot-Grid"></a></h2><p>A <code>Grid</code> is the number of rows and columns you specify when calling <code>plt.subplot()</code>. Each section of the <code>Grid</code> is called a <em>cell</em>. You can create any sized grid you want. But <code>plt.subplot()</code> only creates <code>Subplots</code> that span one cell. To create <code>Subplots</code> that span multiple cells, use the <a href="https://matplotlib.org/api/_as_gen/matplotlib.gridspec.GridSpec.html#matplotlib.gridspec.GridSpec"><code>GridSpec</code> class</a>, the <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots"><code>plt.subplots()</code> function</a> or the <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot2grid.html#matplotlib.pyplot.subplot2grid"><code>subplot2grid</code></a> method.</p>
+<p>I discuss these in detail in my article on matplotlib subplots.</p>
+</div>
+</div>
+</div>
+<div><div>
+</div><div>
+<div>
+<h2>Summary<a href="#Summary"></a></h2><p>Now you know everything there is to know about the subplot function in matplotlib.</p>
+<p>You can create grids of any size you want and draw subplots of any size - as long as it takes up <code>1/x</code>th of the plot. If you want a larger or smaller <code>Figure</code> you can change it with the <code>plt.figure()</code> function. Plus you can control the DPI, spacing and set the title.</p>
+<p>Armed with this knowlege, you can now make impressive plots of unlimited complexity.</p>
+<p>But you have also discovered some of the limits of the subplot function. And you may feel that it is a bit clunky to type <code>plt.subplot()</code> whenever you want to draw a new one.</p>
+<p>To learn how to create more detailed plots with less lines of code, read my article on the <code>plt.subplots()</code> (with an 's') function.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p align="center" style="font-size: 12px; color: #9d9999;">Wordpress conversion from plt.subplot.ipynb by <A HREF="https://github.com/bennylp/nb2wp">nb2wp</A> v0.3.1</p>
+</body>
+</html>
