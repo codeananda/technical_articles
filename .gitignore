@@ -1,0 +1,23 @@
+# vs-code
+.vscode/
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+
+# Jupyter Notebook
+.ipynb_checkpoints
+.ipynb_checkpoints/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ~$ temp files created by Windows
+~$*.xlsx
+
+# Log files
+lightning_logs/
+wandb/
