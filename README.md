@@ -41,6 +41,5 @@ For over a year, I've been writing for [Panoply.io](https://panoply.io/) - a dat
 * [Cloud Data Warehouse vs. Traditional Data Warehouse Concepts](https://panoply.io/data-warehouse-guide/data-warehouse-concepts-traditional-vs-cloud/) (no attribution)
 * [The Difference Between a Database and a Data Warehouse](https://panoply.io/data-warehouse-guide/the-difference-between-a-database-and-a-data-warehouse/) (no attribution)
 * [3 Ways to Build An ETL Process with Examples](https://panoply.io/data-warehouse-guide/3-ways-to-build-an-etl-process/) (no attribution)
-* [Top 7 Best ELT Data Pipeline Tools](https://blog.panoply.io/best-data-pipeline-tools)
-* [Top Python ETL Tools for 2021](https://blog.panoply.io/top-9-python-etl-tools-and-when-to-use-them)
+* [Top Python ETL Tools for 2021](https://blog.panoply.io/top-9-python-etl-tools-and-when-to-use-them) (with code snippets)
 * [Top BI Tools Of 2021—And How To Choose The Right One](https://blog.panoply.io/top-25-business-intelligence-tools-and-how-to-decide)
