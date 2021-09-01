@@ -10,17 +10,17 @@ The two types of articles I have the most experience with are:
 
 I am not well-versed in highly formal or non-technical business content. 
 
-I excel at easy-to-read technical content that ranks, builds your audience and sells your services. 
+I excel at easy-to-read technical content that ranks, builds your audience, and sells your services. 
 
 # Matplotlib Code Tutorial Articles (+ Videos) - Written in Jupyter
 
-This repo contains a collection of technical code tutorial articles I wrote for [Finxter.com](https://blog.finxter.com/) - a leading Python blog. Each of them were paid projects on Upwork and resulted in ⭐⭐⭐⭐⭐ reviews such as this one:
+This repo contains a collection of technical code tutorial articles I wrote for [Finxter.com](https://blog.finxter.com/) - a leading Python blog. Each was a paid project on Upwork and all resulted in ⭐⭐⭐⭐⭐ reviews such as this one:
 
 <img width="664" alt="Screenshot 2021-09-01 at 18 05 58" src="https://user-images.githubusercontent.com/51246969/131705518-41ba384e-9cce-4846-b202-2fed0005a6ba.png">
 
-I provided the words, code and video. The client supplied the styling. You can see the videos on the published pages below. They are screencast videos without my face and were recorded in one-take.
+I provided the words, code, and video. The client supplied the styling. Click below to see the videos. They are screencast videos without my face and were recorded in one take.
 
-I wrote each article in Jupyter, then used the [nb2wp](https://github.com/bennylp/nb2wp) library to convert the notebook to Wordpress.com HTML. Finally, I uploaded the articles to Wordpress.
+I wrote each article in Jupyter, then used the [nb2wp](https://github.com/bennylp/nb2wp) library to convert the notebook to Wordpress.com HTML. Finally, I uploaded the final version to WordPress.
 
 ### Links to Published Code Tutorial (+ Video Walkthrough) Articles
 
@@ -38,9 +38,9 @@ I have written [many more](https://blog.finxter.com/author/adam) articles for Fi
 
 # Business-Focused Articles
 
-Since April 2020, I've been writing for [Panoply.io](https://panoply.io/) - a data warehousing company based in the US. I've written about a range of topics including ETL, BI tools and cloud native data warehousing solutions.
+Since April 2020, I've been writing for [Panoply.io](https://panoply.io/) - a data warehousing company based in the US. I've written about various topics, including ETL, BI tools, and cloud-native data warehousing solutions.
 
-For each article, the client provided a brief outlining the title, the main points the article should hit and the keywords to target. I've found that getting on the same page like this before starting writing is the foundation for a long and fruitful writing parternship. I thoroughly enjoy writing for Panoply and hope future clients can meet their standards of preparation.
+The client provided a brief for each article that outlined the title, the main points the article should hit, and the keywords to target. I've found that getting on the same page like this before starting writing is the foundation for a long and fruitful writing partnership. I thoroughly enjoy writing for Panoply and hope future clients can meet their standards of preparation.
 
 ### Links to Published Technical Business Content
 
