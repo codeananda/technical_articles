@@ -20,6 +20,8 @@ This repo contains a collection of technical code tutorial articles I wrote for 
 
 I provided the words, code and video. The client supplied the styling. You can see the videos on the published pages below. They are screencast videos without my face and were recorded in one-take.
 
+I wrote each article in Jupyter, then used the [nb2wp](https://github.com/bennylp/nb2wp) library to convert the notebook to Wordpress.com HTML. Finally, I uploaded the articles to Wordpress.
+
 ### Links to Published Code Tutorial (+ Video Walkthrough) Articles
 
 * Matplotlib [3D Plot](https://blog.finxter.com/matplotlib-3d-plot-full/)
@@ -37,6 +39,8 @@ I have written [many more](https://blog.finxter.com/author/adam) articles for Fi
 # Business-Focused Articles
 
 Since April 2020, I've been writing for [Panoply.io](https://panoply.io/) - a data warehousing company based in the US. I've written about a range of topics including ETL, BI tools and cloud native data warehousing solutions.
+
+For each article, the client provided a brief outlining the title, the main points the article should hit and the keywords to target. I've found that getting on the same page like this before starting writing is the foundation for a long and fruitful writing parternship. I thoroughly enjoy writing for Panoply and hope future clients can meet their standards of preparation.
 
 ### Links to Published Technical Business Content
 
