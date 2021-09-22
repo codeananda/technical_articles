@@ -51,3 +51,5 @@ The client provided a brief for each article that outlined the title, the main p
 * [3 Ways to Build An ETL Process with Examples](https://panoply.io/data-warehouse-guide/3-ways-to-build-an-etl-process/) (no attribution)
 * [Top Python ETL Tools for 2021](https://blog.panoply.io/top-9-python-etl-tools-and-when-to-use-them) (with code snippets)
 * [Top BI Tools Of 2021—And How To Choose The Right One](https://blog.panoply.io/top-25-business-intelligence-tools-and-how-to-decide)
+* 5 Ways to Create a Data Dictionary + (Free Template!) [link](https://blog.panoply.io/how-to-create-a-data-dictionary)
+* Data Orchestration Guide & Directed Acyclic Graphs (DAG) Examples [link](https://blog.panoply.io/data-orchestration-and-directed-acyclic-graphs)
