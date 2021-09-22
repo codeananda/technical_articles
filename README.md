@@ -2,7 +2,7 @@
 
 I have extensive experience writing technical blog posts in the AI and ML space. I've written for multiple clients over the last few years. You can see pages of 5-star reviews on my [Upwork profile](https://www.upwork.com/freelancers/~01153ca9fd0099730e).
 
-<img width="680" alt="Screenshot 2021-09-01 at 18 41 25" src="https://user-images.githubusercontent.com/51246969/131710340-87a83dd4-4a6f-49fe-b65e-6af308e2b520.png">
+<img width="656" alt="Screenshot 2021-09-22 at 18 46 14" src="https://user-images.githubusercontent.com/51246969/134386722-7d241b62-a511-485d-afca-b4cb2648d0e0.png">
 
 The two types of articles I have the most experience with are:
 1. Code Tutorials (+ video walkthroughs)
@@ -42,7 +42,9 @@ Since April 2020, I've been writing for [Panoply.io](https://panoply.io/) - a da
 
 The client provided a brief for each article that outlined the title, the main points the article should hit, and the keywords to target. I've found that getting on the same page like this before starting writing is the foundation for a long and fruitful writing partnership. I thoroughly enjoy writing for Panoply and hope future clients can meet their standards of preparation.
 
-### Links to Published Technical Business Content
+<img width="680" alt="Panoply Review" src="https://user-images.githubusercontent.com/51246969/131710340-87a83dd4-4a6f-49fe-b65e-6af308e2b520.png">
+
+### Links to Published Technical Business Content 
 
 * [7 Best Practices for Building a Data Dictionary](https://blog.panoply.io/data-dictionary-best-practices)
 * [Data Orchestration Guide & Directed Acyclic Graphs (DAG) Examples](https://blog.panoply.io/data-orchestration-and-directed-acyclic-graphs)
