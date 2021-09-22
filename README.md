@@ -42,6 +42,8 @@ Since April 2020, I've been writing for [Panoply.io](https://panoply.io/) - a da
 
 The client provided a brief for each article that outlined the title, the main points the article should hit, and the keywords to target. I've found that getting on the same page like this before starting writing is the foundation for a long and fruitful writing partnership. I thoroughly enjoy writing for Panoply and hope future clients can meet their standards of preparation.
 
+Here is the review Panoply left me the first time we worked together.
+
 <img width="680" alt="Panoply Review" src="https://user-images.githubusercontent.com/51246969/131710340-87a83dd4-4a6f-49fe-b65e-6af308e2b520.png">
 
 ### Links to Published Technical Business Content 
@@ -53,5 +55,4 @@ The client provided a brief for each article that outlined the title, the main p
 * [3 Ways to Build An ETL Process with Examples](https://panoply.io/data-warehouse-guide/3-ways-to-build-an-etl-process/) (no attribution)
 * [Top Python ETL Tools for 2021](https://blog.panoply.io/top-9-python-etl-tools-and-when-to-use-them) (with code snippets)
 * [Top BI Tools Of 2021—And How To Choose The Right One](https://blog.panoply.io/top-25-business-intelligence-tools-and-how-to-decide)
-* 5 Ways to Create a Data Dictionary + (Free Template!) [link](https://blog.panoply.io/how-to-create-a-data-dictionary)
-* Data Orchestration Guide & Directed Acyclic Graphs (DAG) Examples [link](https://blog.panoply.io/data-orchestration-and-directed-acyclic-graphs)
+* [5 Ways to Create a Data Dictionary + (Free Template!)](https://blog.panoply.io/how-to-create-a-data-dictionary)
