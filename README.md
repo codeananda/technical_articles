@@ -58,5 +58,7 @@ Here is the review Panoply left me the first time we worked together.
 * [Top BI Tools Of 2021—And How To Choose The Right One](https://blog.panoply.io/top-25-business-intelligence-tools-and-how-to-decide)
 * [5 Ways to Create a Data Dictionary + (Free Template!)](https://blog.panoply.io/how-to-create-a-data-dictionary)
 
-**Other**
-* [Salesforce Testing: Actionable Tips for Beginners](https://www.startupguys.net/salesforce-testing-actionable-tips/) - (no attribution) - a short 800 word article for SEO backlink purposes written for [Functionize](https://www.functionize.com/)
+**Functionize - AI Testing Software**
+800-900 word articles for SEO backlinks
+* [Salesforce Testing: Actionable Tips for Beginners](https://www.startupguys.net/salesforce-testing-actionable-tips/) (no attribution)
+* [Salesforce Functional Testing Tips & Tricks](https://www.smallbizdaily.com/salesforce-functional-testing-tips-tricks/) (no attribution)
