@@ -24,6 +24,8 @@ I wrote each article in Jupyter, then used the [nb2wp](https://github.com/bennyl
 
 ### Links to Published Code Tutorial (+ Video Walkthrough) Articles
 
+#### Finxter
+
 * Matplotlib [3D Plot](https://blog.finxter.com/matplotlib-3d-plot-full/)
 * Matplotlib [3D Plot Advanced](https://blog.finxter.com/matplotlib-3d-plot-advanced/)
 * Matplotlib [Boxplot](https://blog.finxter.com/matplotlib-boxplot/)
@@ -31,6 +33,10 @@ I wrote each article in Jupyter, then used the [nb2wp](https://github.com/bennyl
 * Matplotlib [Legend](https://blog.finxter.com/matplotlib-legend/)
 * Matplotlib [`plt.subplot()`](https://blog.finxter.com/matplotlib-subplot/)
 * Matplotlib [`plt.subplots()`](https://blog.finxter.com/matplotlib-subplots/)
+
+#### H2O.ai
+
+* Time Series Preprocessing and Feature Engineering - [link](https://www.h2o.ai/blog/an-introduction-to-time-series-modeling-time-series-preprocessing-and-feature-engineering/)
 
 <img width="657" alt="Screenshot 2021-09-01 at 18 06 08" src="https://user-images.githubusercontent.com/51246969/131705542-869a51b5-8325-4482-9973-083b10af225c.png">
 
