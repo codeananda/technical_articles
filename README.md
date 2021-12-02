@@ -36,7 +36,8 @@ I wrote each article in Jupyter, then used the [nb2wp](https://github.com/bennyl
 
 #### H2O.ai
 
-* Time Series Preprocessing and Feature Engineering - [link](https://www.h2o.ai/blog/an-introduction-to-time-series-modeling-time-series-preprocessing-and-feature-engineering/)
+* [An Introduction to Time Series Modeling: Time Series Preprocessing and Feature Engineering](https://www.h2o.ai/blog/an-introduction-to-time-series-modeling-time-series-preprocessing-and-feature-engineering/) - technical article with code snippets
+* [Building Resilient Supply Chains with AI](https://www.h2o.ai/blog/building-resilient-supply-chains-with-ai/)
 
 <img width="657" alt="Screenshot 2021-09-01 at 18 06 08" src="https://user-images.githubusercontent.com/51246969/131705542-869a51b5-8325-4482-9973-083b10af225c.png">
 
@@ -68,3 +69,6 @@ Here is the review Panoply left me the first time we worked together.
 800-900 word articles for SEO backlinks
 * [Salesforce Testing: Actionable Tips for Beginners](https://www.startupguys.net/salesforce-testing-actionable-tips/) (no attribution)
 * [Salesforce Functional Testing Tips & Tricks](https://www.smallbizdaily.com/salesforce-functional-testing-tips-tricks/) (no attribution)
+
+**Tasq.ai - Data Labeling**
+* [The Benefits of Adaptive Sampling](https://www.tasq.ai/blog/the-benefits-of-adaptive-sampling/) (ghost written for the CEO)
