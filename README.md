@@ -38,6 +38,8 @@ I wrote each article in Jupyter, then used the [nb2wp](https://github.com/bennyl
 
 * [An Introduction to Time Series Modeling: Time Series Preprocessing and Feature Engineering](https://www.h2o.ai/blog/an-introduction-to-time-series-modeling-time-series-preprocessing-and-feature-engineering/) (with code snippets)
 * [Building Resilient Supply Chains with AI](https://www.h2o.ai/blog/building-resilient-supply-chains-with-ai/)
+* [An Introduction to Time Series Modeling: Traditional Time Series Models and Their Limitations](https://www.h2o.ai/blog/an-introduction-to-time-series-modeling-traditional-time-series-models-and-their-limitations/) (with code snippets)
+* [Why Companies Need to Think About MLOps](https://www.h2o.ai/blog/why-companies-need-to-think-about-mlops/)
 
 <img width="657" alt="Screenshot 2021-09-01 at 18 06 08" src="https://user-images.githubusercontent.com/51246969/131705542-869a51b5-8325-4482-9973-083b10af225c.png">
 
