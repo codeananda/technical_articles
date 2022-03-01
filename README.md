@@ -43,6 +43,7 @@ I wrote each article in Jupyter, then used the [nb2wp](https://github.com/bennyl
 * [Shapley Values – A Gentle Introduction](https://www.h2o.ai/blog/shapley-values-a-gentle-introduction/)
 * [What Are Feature Stores and Why Are They Important?](https://www.h2o.ai/blog/what-are-feature-stores-and-why-are-they-important/)
 * [An Introduction to Unsupervised Machine Learning](https://h2o.ai/blog/an-introduction-to-unsupervised-machine-learning/)
+* [Unsupervised Learning Metrics](https://h2o.ai/blog/unsupervised-learning-metrics/)
 
 <img width="657" alt="Screenshot 2021-09-01 at 18 06 08" src="https://user-images.githubusercontent.com/51246969/131705542-869a51b5-8325-4482-9973-083b10af225c.png">
 
